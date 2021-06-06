@@ -96,7 +96,7 @@ export class TodoItemView extends ItemView {
       el.onClickEvent(() => setActivePane(TodoItemViewPane.Inbox));
     });
     container.createDiv(`todo-item-view-toolbar-item${activeClass(TodoItemViewPane.Someday)}`, (el) => {
-      el.appendChild(RenderIcon(Icon.Someday, 'Someday / Maybe'));
+      el.appendChild(RenderIcon(Icon.Someday, 'Follow'));
       el.onClickEvent(() => setActivePane(TodoItemViewPane.Someday));
     });
   }
