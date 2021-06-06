@@ -20,7 +20,6 @@ export class TodoParser {
       status,
       description,
       description.match(somedayPattern) != null,
-      description.match(trackingPattern) != null,
       filePath,
       (entry.index ?? 0) + todoItemOffset,
       entry[0].length - todoItemOffset,
