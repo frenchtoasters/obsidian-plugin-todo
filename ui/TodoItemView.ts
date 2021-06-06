@@ -92,7 +92,7 @@ export class TodoItemView extends ItemView {
       el.onClickEvent(() => setActivePane(TodoItemViewPane.Scheduled));
     });
     container.createDiv(`todo-item-view-toolbar-item${activeClass(TodoItemViewPane.Inbox)}`, (el) => {
-      el.appendChild(RenderIcon(Icon.Inbox, 'Inbox'));
+      el.appendChild(RenderIcon(Icon.Inbox, 'Backlog'));
       el.onClickEvent(() => setActivePane(TodoItemViewPane.Inbox));
     });
     container.createDiv(`todo-item-view-toolbar-item${activeClass(TodoItemViewPane.Someday)}`, (el) => {
