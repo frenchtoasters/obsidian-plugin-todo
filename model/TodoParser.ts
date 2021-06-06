@@ -13,6 +13,7 @@ export class TodoParser {
 
     const datePattern = /#(\d{4}-\d{2}-\d{2})/g;
     const somedayPattern = /#(someday)/g;
+    const trackingPattern = /#(track)/g;
     const dateMatches = description.match(datePattern);
     const actionDate = dateMatches != null ? new Date(dateMatches[0]?.substring(1)) : undefined;
 
@@ -20,6 +21,7 @@ export class TodoParser {
       status,
       description,
       description.match(somedayPattern) != null,
+      description.match(trackingPattern) != null,
       filePath,
       (entry.index ?? 0) + todoItemOffset,
       entry[0].length - todoItemOffset,
